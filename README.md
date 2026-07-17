@@ -17,13 +17,6 @@ If you encounter issues while installing this package, 99% of the time it's one 
 The AUR/extra has the full `intel-oneapi-toolkit`, `intel-oneapi-basekit-2025` or `intel-oneapi-hpckit` packages with all the other analysis-, debug tools and add-ons which is gigabytes of stuff you simply don't need. The full Intel® oneAPI Toolkit is intended for developers, if all you want is SYCL acceleration for llama.cpp, you only need a small subset of it. That's why the Intel® Deep Learning Essentials exist. This package ships exactly that and nothing else for close to *10 GB less than the full kit*.
 It also bundles oneDNN, which is available on the arch repos already, but it is essential to download the matching package to the Intel® Deep Learning Essentials to avoid issues in the /opt/intel/oneapi/ folder, which is why I decided to bundle it here instead of adding it as a dependency. OneDNN used to be part of the Intel® Deep Learning Essentials up until 2025.3.3, no idea why they even decided to ship it seperately with 2026.0.0.
 
-## What's included
-
-| Component | Version | Size |
-|---|---|---|
-| [Intel® Deep Learning Essentials](https://www.intel.com/content/www/us/en/developer/tools/oneapi/oneapi-toolkit-download.html?packages=dl-essentials&dl-essentials-os=linux&dl-lin=offline) (compiler, MKL, DPC++, CCL, TBB) | 2026.1.0 | 1.37GB |
-| [Intel® oneAPI Deep Neural Network Library (oneDNN)](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onednn-download.html?operatingsystem=linux&distribution-linux=offline) | 2026.0.1 | 316MB |
-
 ## Install
 
 ### Via AUR helper
