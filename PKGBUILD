@@ -74,6 +74,7 @@ package() {
 
     # Register compiler lib dir with the system linker
     install -d "${pkgdir}/etc/ld.so.conf.d"
-    echo '/opt/intel/oneapi/compiler/2026.1/lib' \
-        > "${pkgdir}/etc/ld.so.conf.d/${pkgname}.conf"
+    for _comp in compiler mkl tbb dnnl ccl umf tcm; do
+        echo "/opt/intel/oneapi/${_comp}/latest/lib"
+    done > "${pkgdir}/etc/ld.so.conf.d/${pkgname}.conf"
 }
